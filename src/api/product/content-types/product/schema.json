@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "text",
+      "required": true
+    },
+    "Slug": {
+      "type": "uid",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 110
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Casual Wear",
+        "Formal Wear",
+        "Gym Wear",
+        "Electronic",
+        "Accessories",
+        "Home",
+        "Kitchen"
+      ],
+      "required": true
+    },
+    "Size": {
+      "type": "enumeration",
+      "enum": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ]
+    },
+    "Color": {
+      "type": "enumeration",
+      "enum": [
+        "Red",
+        "Blue",
+        "Green",
+        "Yellow",
+        "Violet",
+        "Purple",
+        "Black",
+        "Orange",
+        "White"
+      ],
+      "required": true
+    },
+    "Price": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "Quantity": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    }
+  }
+}
